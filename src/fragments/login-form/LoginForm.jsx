@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import "./LoginForm.css";
-import { loginValidation } from "../../pages/utils";
+import { loginValidation } from "./utils";
 function LoginForm() {
   const [delay, setDelay] = useState(false);
   const [login, setLogin] = useState({
