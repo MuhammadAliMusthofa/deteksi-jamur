@@ -6,10 +6,10 @@ function App() {
   return (
     <div className="app">
       <main className="content">
-        {/* <Routes>
-          <Route path="/" element={<Front />} />
-        </Routes> */}
-        <Login />
+        <Routes>
+          <Route path="/" element={<Login />} />
+        </Routes>
+        {/* <Login /> */}
       </main>
     </div>
   );
