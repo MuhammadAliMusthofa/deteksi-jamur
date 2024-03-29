@@ -16,7 +16,7 @@ function LoginForm() {
     setDelay(true);
     
     try {
-      // Mengirim data registrasi ke API
+      // Mengirim data login ke API
       const response = await fetch("https://mymushroom.my.id/login", {
         method: "POST",
         headers: {
@@ -26,14 +26,18 @@ function LoginForm() {
       });
 
       if (response.ok) {
-        // Navigasi ke halaman login setelah registrasi berhasil
+        // Mendapatkan access_token dari respons API
+        const { access_token } = await response.json();
+        // Menyimpan access_token dalam sesi
+        sessionStorage.setItem("access_token", access_token);
+        // Navigasi ke halaman dashboard setelah login berhasil
         navigate("/dashboard");
       } else {
         // Handle error response from API
-        console.error("login failed:", response.statusText);
+        console.error("Login failed:", response.statusText);
       }
     } catch (error) {
-      console.error("Error login user:", error);
+      console.error("Error logging in user:", error);
     } finally {
       setDelay(false);
     }
@@ -42,6 +46,16 @@ function LoginForm() {
   const handleChange = (e) => {
     setLogin({ ...login, [e.target.name]: e.target.value });
   };
+
+  // Fungsi untuk memeriksa apakah pengguna sudah login
+  const isLoggedIn = () => {
+    return sessionStorage.getItem("access_token") !== null;
+  };
+
+  // Memeriksa status login sebelum render komponen
+  if (isLoggedIn()) {
+    return <p>You are already logged in!</p>;
+  }
 
   return (
     <div className="wrapper-one">

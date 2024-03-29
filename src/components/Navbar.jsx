@@ -1,6 +1,35 @@
 import React, { useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Navbar() {
+   const navigate = useNavigate();
+
+  const handleLogout = async () => {
+    try {
+      // Mengambil token akses dari sessionStorage
+      
+      const accessToken = sessionStorage.getItem("access_token");
+      // Mengirim permintaan logout ke API
+      const response = await fetch("http://mymushroom.my.id/logout", {
+        method: "POST",
+        headers: {
+          "Authorization": `Bearer ${accessToken}`,
+        },
+      });
+
+      if (response.ok) {
+        // Menghapus token akses dari sessionStorage setelah logout berhasil
+        sessionStorage.removeItem("access_token");
+
+        // Redirect ke halaman login setelah logout berhasil
+        navigate("/");
+      } else {
+        console.error("Logout failed:", response.statusText);
+      }
+    } catch (error) {
+      console.error("Error logout:", error);
+    }
+  };
   useEffect(() => {
     // Navbar Fixed
     const handleScroll = () => {
@@ -73,39 +102,39 @@ function Navbar() {
                   >
                      <ul class="block lg:flex lg:mr-[300px]">
                         <li class="group">
-                           <a
-                              href="index.html"
+                           <Link
+                              to="/dashboard"
                               class="text-base font-bold text-saildark py-2 mx-8 group-hover:text-primary flex"
-                              >Home</a
-                           >
+                              >Home</Link>
+                         
                         </li>
                         <li class="group">
-                           <a
-                              href="mushroom.html"
+                           <Link
+                              to="/dashboard"
                               class="text-base font-bold text-saildark py-2 mx-8 group-hover:text-primary flex"
-                              >Mushroom</a
-                           >
+                              >Mushroom</Link>
+                           
                         </li>
                         <li class="group">
-                           <a
-                              href="#portofolio"
+                           <Link
+                              to="history"
                               class="text-base font-bold text-saildark py-2 mx-8 group-hover:text-primary flex"
-                              >History</a
-                           >
+                              >History</Link>
+                           
                         </li>
                         <li class="group">
-                           <a
+                           <Link
                               href="about.html"
                               class="text-base font-bold text-saildark py-2 mx-8 group-hover:text-primary flex"
-                              >About</a
-                           >
+                              >About</Link>
+                     
                         </li>
                      </ul>
                   </nav>
                </div>
                <div class="px-4">
-                  <a
-                     href="index.html"
+                  <Link
+                     to="/dashboard"
                      class="font-bold text-lg text-primary block py-6"
                   >
                      <img
@@ -115,13 +144,13 @@ function Navbar() {
                         width="43"
                         class="max-w-full mx-auto"
                      />
-                  </a>
+                  </Link>
                </div>
                <div class="px-4">
                   <ul>
                      <li class="group flex items-center">
-                        <a
-                           href="login.html"
+                        <button
+                           onClick={handleLogout}
                            class="text-base font-bold text-saildark group-hover:text-primary flex items-center"
                         >
                            <img
@@ -132,7 +161,7 @@ function Navbar() {
                               class="mr-3"
                            />
                            <span>Logout</span>
-                        </a>
+                        </button>
                      </li>
                   </ul>
                </div>
@@ -144,8 +173,8 @@ function Navbar() {
             class="container hidden lg:flex justify-between items-center relative"
          >
             <div class="px-4">
-               <a
-                  href="#home"
+               <Link
+                  to="/dashboard"
                   class="font-bold text-lg text-primary block py-6"
                >
                   <img
@@ -155,7 +184,7 @@ function Navbar() {
                      width="43"
                      class="max-w-full mx-auto mr-4"
                   />
-               </a>
+               </Link>
             </div>
             <div class="px-4">
                <nav
@@ -164,32 +193,32 @@ function Navbar() {
                >
                   <ul class="block lg:flex lg:mr-[300px]">
                      <li class="group">
-                        <a
-                           href="#home"
+                        <Link
+                           to="/dashboard"
                            class="text-base font-bold text-saildark py-2 mx-8 group-hover:text-primary flex"
-                           >Home</a
-                        >
+                           >Home</Link>
+                     
                      </li>
                      <li class="group">
-                        <a
-                           href="mushroom.html"
+                        <Link
+                           to="/jamur"
                            class="text-base font-bold text-saildark py-2 mx-8 group-hover:text-primary flex"
-                           >Mushroom</a
-                        >
+                           >Mushroom</Link>
+                 
                      </li>
                      <li class="group">
-                        <a
+                        <Link
                            href="#portofolio"
                            class="text-base font-bold text-saildark py-2 mx-8 group-hover:text-primary flex"
-                           >History</a
-                        >
+                           >History</Link>
+                        
                      </li>
                      <li class="group">
-                        <a
+                        <Link
                            href="about.html"
                            class="text-base font-bold text-saildark py-2 mx-8 group-hover:text-primary flex"
-                           >About</a
-                        >
+                           >About</Link>
+                        
                      </li>
                   </ul>
                </nav>
@@ -197,8 +226,8 @@ function Navbar() {
             <div class="px-4">
                <ul>
                   <li class="group flex items-center">
-                     <a
-                        href="login.html"
+                     <button
+                         onClick={handleLogout}
                         class="text-base font-bold text-saildark group-hover:text-primary flex items-center"
                      >
                         <img
@@ -209,7 +238,7 @@ function Navbar() {
                            class="mr-3"
                         />
                         <span>Logout</span>
-                     </a>
+                     </button>
                   </li>
                </ul>
             </div>
