@@ -24,10 +24,6 @@ const Dashboard = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleFileChange = (e) => {
-    setFormData({ ...formData, image: e.target.files[0] });
-  };
-
   const accessToken = sessionStorage.getItem("access_token");
 
   const handleSubmit = async (event) => {
@@ -48,14 +44,13 @@ const Dashboard = () => {
         body: formDataToSend,
       });
 
-      console.log(response);
       if (response.ok) {
         // Data berhasil dikirim, tambahkan logika yang sesuai di sini
         alert("data berhasil diinput");
 
         console.log("Data berhasil dikirim");
       } else {
-        console.error("Gagal mengirim data:", response);
+        console.error("Gagal mengirim data:", response.statusText);
       }
     } catch (error) {
       console.error("Error:", error);
@@ -113,7 +108,6 @@ const Dashboard = () => {
                             strokeLinecap="round"
                             strokeLinejoin="round"
                             strokeWidth="2"
-                            i="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"
                           />
                         </svg>
                         <p className="mb-2 text-sm text-white">

@@ -7,6 +7,7 @@ import Detail from "./pages/DetailMushroom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import About from "./pages/About";
+import History from "./pages/History";
 
 function App() {
   const location = useLocation();
@@ -20,12 +21,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/history" element={<Dashboard />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/home" element={<Dashboard />} />
           <Route path="/about" element={<About />} />
           <Route path="/jamur" element={<Mushroom />} />
-          <Route path="/history" element={<Dashboard />} />
+          <Route path="/history" element={<History />} />
           <Route path="/mushroom-detail/:name" element={<Detail />} />
         </Routes>
         {!sharedLayout && <Footer />}

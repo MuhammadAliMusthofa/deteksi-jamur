@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-
+import icon from "../assets/img/icon/Mushroom_logo.ico";
 function Navbar() {
   const navigate = useNavigate();
 
@@ -202,7 +202,7 @@ function Navbar() {
               </li>
               <li className="group">
                 <Link
-                  href="#portofolio"
+                  to={"/history"}
                   className="text-base font-bold text-saildark py-2 mx-8 group-hover:text-primary flex"
                 >
                   History
