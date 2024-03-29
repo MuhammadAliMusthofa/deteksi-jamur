@@ -38,7 +38,7 @@ const Dashboard = () => {
       formDataToSend.append("name", formData.name);
       formDataToSend.append("image", formData.image);
 
-      const response = await fetch("https://mymushroom.my.id/user-mushroom", {
+      const response = await fetch("http://mymushroom.my.id/user-mushroom", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

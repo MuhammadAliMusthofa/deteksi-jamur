@@ -210,7 +210,7 @@ function Navbar() {
               </li>
               <li className="group">
                 <Link
-                  href="about.html"
+                  href="/about"
                   className="text-base font-bold text-saildark py-2 mx-8 group-hover:text-primary flex"
                 >
                   About
