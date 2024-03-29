@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"; // Mengimpor useHistory dari react-router-dom
 import "../login-form/LoginForm.css"; // Ganti dengan nama file CSS yang sesuai
 
-function LoginForm() {
+function RegistrationForm() {
   const navigate = useNavigate(); // Mendapatkan objek history dari useHistory
 
   const [delay, setDelay] = useState(false);
-  const [login, setLogin] = useState({
+  const [registration, setRegistration] = useState({
     username: "",
     password: "",
   });
@@ -17,37 +17,37 @@ function LoginForm() {
     
     try {
       // Mengirim data registrasi ke API
-      const response = await fetch("https://mymushroom.my.id/login", {
+      const response = await fetch("https://mymushroom.my.id/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(login),
+        body: JSON.stringify(registration),
       });
 
       if (response.ok) {
         // Navigasi ke halaman login setelah registrasi berhasil
-        navigate("/dashboard");
+        navigate("/");
       } else {
         // Handle error response from API
-        console.error("login failed:", response.statusText);
+        console.error("Registration failed:", response.statusText);
       }
     } catch (error) {
-      console.error("Error login user:", error);
+      console.error("Error registering user:", error);
     } finally {
       setDelay(false);
     }
   };
 
   const handleChange = (e) => {
-    setLogin({ ...login, [e.target.name]: e.target.value });
+    setRegistration({ ...registration, [e.target.name]: e.target.value });
   };
 
   return (
     <div className="wrapper-one">
       <div className="wrapper">
         <form onSubmit={(e) => handleSubmit(e)}>
-          <h1>Log Fucking Gin</h1>
+          <h1>Register</h1>
           <div className="input-box">
             <input
               type="text"
@@ -68,7 +68,7 @@ function LoginForm() {
           </div>
          
           <button type="submit" className="btn" disabled={delay}>
-            {delay ? "Waiting..." : "Login"}
+            {delay ? "Waiting..." : "Register"}
           </button>
         </form>
       </div>
@@ -76,4 +76,4 @@ function LoginForm() {
   );
 }
 
-export default LoginForm;
+export default RegistrationForm;

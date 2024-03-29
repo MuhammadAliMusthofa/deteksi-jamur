@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link href="/src/assets/css/output.css" rel="stylesheet" />
+      <link href="/src/assets/img/icon/Mushroom_logo.png" rel="shortcut icon" />
+      <title>Document</title>
+   </head>
+   <body>
+      <!-- Header Start -->
+      <header
+         class="bg-sail absolute top-0 left-0 w-full flex items-center z-10 transition duration-75 ease-in-out"
+      >
+         <!-- Tampilan mobile -->
+         <div class="container lg:hidden">
+            <div class="flex justify-between items-center relative">
+               <div class="px-4">
+                  <button
+                     id="hamburger"
+                     name="hamburger"
+                     type="button"
+                     class="block absolute left-0"
+                  >
+                     <span
+                        class="hamburger-line transition duration-300 ease-in-out origin-top-left"
+                     ></span>
+                     <span
+                        class="hamburger-line transition duration-300 ease-in-out"
+                     ></span>
+                     <span
+                        class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"
+                     ></span>
+                  </button>
+                  <nav
+                     id="nav-menu"
+                     class="hidden absolute py-5 bg-white shadow-lg rounded-t-none rounded-bl-lg rounded-br-lg max-w-xl w-full right-36 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none"
+                  >
+                     <ul class="block lg:flex lg:mr-[300px]">
+                        <li class="group">
+                           <a
+                              href="index.html"
+                              class="text-base font-bold text-saildark py-2 mx-8 group-hover:text-primary flex"
+                              >Home</a
+                           >
+                        </li>
+                        <li class="group">
+                           <a
+                              href="mushroom.html"
+                              class="text-base font-bold text-saildark py-2 mx-8 group-hover:text-primary flex"
+                              >Mushroom</a
+                           >
+                        </li>
+                        <li class="group">
+                           <a
+                              href="#portofolio"
+                              class="text-base font-bold text-saildark py-2 mx-8 group-hover:text-primary flex"
+                              >History</a
+                           >
+                        </li>
+                        <li class="group">
+                           <a
+                              href="about.html"
+                              class="text-base font-bold text-saildark py-2 mx-8 group-hover:text-primary flex"
+                              >About</a
+                           >
+                        </li>
+                     </ul>
+                  </nav>
+               </div>
+               <div class="px-4">
+                  <a
+                     href="index.html"
+                     class="font-bold text-lg text-primary block py-6"
+                  >
+                     <img
+                        src="/src/assets/img/icon/Mushroom_logo.png"
+                        alt="Logo"
+                        height="35"
+                        width="43"
+                        class="max-w-full mx-auto"
+                     />
+                  </a>
+               </div>
+               <div class="px-4">
+                  <ul>
+                     <li class="group flex items-center">
+                        <a
+                           href=""
+                           class="text-base font-bold text-saildark group-hover:text-primary flex items-center"
+                        >
+                           <img
+                              src="/src/assets/svg/logout-svgrepo-com.svg"
+                              alt="Logout"
+                              height="3"
+                              width="15"
+                              class="mr-3"
+                           />
+                           <span>Logout</span>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+
+         <!-- Tampilan layar besar -->
+         <div
+            class="container hidden lg:flex justify-between items-center relative"
+         >
+            <div class="px-4">
+               <a
+                  href="index.html"
+                  class="font-bold text-lg text-primary block py-6"
+               >
+                  <img
+                     src="/src/assets/img/icon/Mushroom_logo.png"
+                     alt="Logo"
+                     height="35"
+                     width="43"
+                     class="max-w-full mx-auto mr-4"
+                  />
+               </a>
+            </div>
+            <div class="px-4">
+               <nav
+                  id="nav-menu"
+                  class="hidden absolute py-5 bg-white shadow-lg rounded-t-none rounded-bl-lg rounded-br-lg max-w-xl w-full right-36 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none"
+               >
+                  <ul class="block lg:flex lg:mr-[300px]">
+                     <li class="group">
+                        <a
+                           href="index.html"
+                           class="text-base font-bold text-saildark py-2 mx-8 group-hover:text-primary flex"
+                           >Home</a
+                        >
+                     </li>
+                     <li class="group">
+                        <a
+                           href="mushroom.html"
+                           class="text-base font-bold text-saildark py-2 mx-8 group-hover:text-primary flex"
+                           >Mushroom</a
+                        >
+                     </li>
+                     <li class="group">
+                        <a
+                           href="#portofolio"
+                           class="text-base font-bold text-saildark py-2 mx-8 group-hover:text-primary flex"
+                           >History</a
+                        >
+                     </li>
+                     <li class="group">
+                        <a
+                           href="about.html"
+                           class="text-base font-bold text-saildark py-2 mx-8 group-hover:text-primary flex"
+                           >About</a
+                        >
+                     </li>
+                  </ul>
+               </nav>
+            </div>
+            <div class="px-4">
+               <ul>
+                  <li class="group flex items-center">
+                     <a
+                        href=""
+                        class="text-base font-bold text-saildark group-hover:text-primary flex items-center"
+                     >
+                        <img
+                           src="/src/assets/svg/logout-svgrepo-com.svg"
+                           alt="Logout"
+                           height="3"
+                           width="15"
+                           class="mr-3"
+                        />
+                        <span>Logout</span>
+                     </a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </header>
+      <!-- Header End -->
+
+      <!-- Scanner Section -->
+
+      <section id="about" class="pt-36 pb-32">
+         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-full mx-auto text-center mb-2">
+               <h4 class="font-semibold text-lg text-primary mb-2">
+                  Mushroom List
+               </h4>
+               <h2 class="font-bold text-saildark text-3xl mb-4">
+                  Mushroom List
+               </h2>
+               <h4 class="font-semibold text-2xl text-primary mb-2">Edible</h4>
+            </div>
+            <div class="py-4 flex flex-wrap justify-between">
+               <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-2 group">
+                  <a href="detail.html">
+                     <div
+                        class="max-w-sm rounded-lg overflow-hidden shadow-lg border border-gray-300 transition duration-300 transform group-hover:scale-105 lg:font-semibold"
+                     >
+                        <div class="relative">
+                           <img
+                              src="/src/assets/img/edible/Champignon.jpg"
+                              alt="Maitake"
+                              class="w-full overflow-hidden rounded-t-lg"
+                              style="max-height: 200px; object-fit: cover"
+                           />
+                        </div>
+                        <div class="px-6 py-4 p-4">
+                           <div class="text-dark text-2xl max-w-md">
+                              <p
+                                 class="text-gray-700 text-base mb-2 text-center"
+                              >
+                                 <span class="font-bold text-primary"
+                                    >Edible</span
+                                 >
+                              </p>
+                              <h2 class="font-bold mb-4 lg:text-xl">
+                                 Champignon
+                              </h2>
+                           </div>
+                           <p class="text-gray-700 text-base mb-4 text-justify">
+                              <span class="font-bold">Nama Latin : </span
+                              >Agaricus bisporus
+                           </p>
+                           <p class="text-gray-700 text-base mb-2 text-justify">
+                              <span class="font-bold">Champignon</span>
+                              , juga dikenal sebagai jamur putih, adalah salah
+                              satu jamur yang paling umum dikonsumsi di seluruh
+                              dunia. Mereka memiliki tudung putih hingga coklat
+                              muda dan biasanya tumbuh di atas tanah.
+                           </p>
+                           <p class="text-gray-700 text-base mb-2 text-justify">
+                              <span class="font-bold">Nutrisi :</span>
+                              <li>
+                                 <span class="font-bold">Kalori :</span> Rendah
+                              </li>
+                              <li>
+                                 <span class="font-bold">Protein :</span> Tinggi
+                              </li>
+                              <li>
+                                 <span class="font-bold">Vitamin :</span> B, D
+                              </li>
+                              <li>
+                                 <span class="font-bold">Mineral :</span>
+                                 selenium, zat besi, zink
+                              </li>
+                           </p>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-10 group">
+                  <a href="detail.html">
+                     <div
+                        class="max-w-sm rounded-lg overflow-hidden shadow-lg border border-gray-300 transition duration-300 transform group-hover:scale-105 lg:font-semibold"
+                     >
+                        <div class="relative">
+                           <img
+                              src="/src/assets/img/edible/Champignon.jpg"
+                              alt="Maitake"
+                              class="w-full overflow-hidden rounded-t-lg"
+                              style="max-height: 200px; object-fit: cover"
+                           />
+                        </div>
+                        <div class="px-6 py-4 p-4">
+                           <div class="text-dark text-2xl max-w-md">
+                              <p
+                                 class="text-gray-700 text-base mb-2 text-center"
+                              >
+                                 <span class="font-bold text-primary"
+                                    >Edible</span
+                                 >
+                              </p>
+                              <h2 class="font-bold mb-4 lg:text-xl">
+                                 Champignon
+                              </h2>
+                           </div>
+                           <p class="text-gray-700 text-base mb-4 text-justify">
+                              <span class="font-bold">Nama Latin : </span
+                              >Agaricus bisporus
+                           </p>
+                           <p class="text-gray-700 text-base mb-2 text-justify">
+                              <span class="font-bold">Champignon</span>
+                              , juga dikenal sebagai jamur putih, adalah salah
+                              satu jamur yang paling umum dikonsumsi di seluruh
+                              dunia. Mereka memiliki tudung putih hingga coklat
+                              muda dan biasanya tumbuh di atas tanah.
+                           </p>
+                           <p class="text-gray-700 text-base mb-2 text-justify">
+                              <span class="font-bold">Nutrisi :</span>
+                              <li>
+                                 <span class="font-bold">Kalori :</span> Rendah
+                              </li>
+                              <li>
+                                 <span class="font-bold">Protein :</span> Tinggi
+                              </li>
+                              <li>
+                                 <span class="font-bold">Vitamin :</span> B, D
+                              </li>
+                              <li>
+                                 <span class="font-bold">Mineral :</span>
+                                 selenium, zat besi, zink
+                              </li>
+                           </p>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-2 group">
+                  <a href="detail.html">
+                     <div
+                        class="max-w-sm rounded-lg overflow-hidden shadow-lg border border-gray-300 transition duration-300 transform group-hover:scale-105 lg:font-semibold"
+                     >
+                        <div class="relative">
+                           <img
+                              src="/src/assets/img/edible/Champignon.jpg"
+                              alt="Maitake"
+                              class="w-full overflow-hidden rounded-t-lg"
+                              style="max-height: 200px; object-fit: cover"
+                           />
+                        </div>
+                        <div class="px-6 py-4 p-4">
+                           <div class="text-dark text-2xl max-w-md">
+                              <p
+                                 class="text-gray-700 text-base mb-2 text-center"
+                              >
+                                 <span class="font-bold text-primary"
+                                    >Edible</span
+                                 >
+                              </p>
+                              <h2 class="font-bold mb-4 lg:text-xl">
+                                 Champignon
+                              </h2>
+                           </div>
+                           <p class="text-gray-700 text-base mb-4 text-justify">
+                              <span class="font-bold">Nama Latin : </span
+                              >Agaricus bisporus
+                           </p>
+                           <p class="text-gray-700 text-base mb-2 text-justify">
+                              <span class="font-bold">Champignon</span>
+                              , juga dikenal sebagai jamur putih, adalah salah
+                              satu jamur yang paling umum dikonsumsi di seluruh
+                              dunia. Mereka memiliki tudung putih hingga coklat
+                              muda dan biasanya tumbuh di atas tanah.
+                           </p>
+                           <p class="text-gray-700 text-base mb-2 text-justify">
+                              <span class="font-bold">Nutrisi :</span>
+                              <li>
+                                 <span class="font-bold">Kalori :</span> Rendah
+                              </li>
+                              <li>
+                                 <span class="font-bold">Protein :</span> Tinggi
+                              </li>
+                              <li>
+                                 <span class="font-bold">Vitamin :</span> B, D
+                              </li>
+                              <li>
+                                 <span class="font-bold">Mineral :</span>
+                                 selenium, zat besi, zink
+                              </li>
+                           </p>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-2 group">
+                  <a href="detail.html">
+                     <div
+                        class="max-w-sm rounded-lg overflow-hidden shadow-lg border border-gray-300 transition duration-300 transform group-hover:scale-105 lg:font-semibold"
+                     >
+                        <div class="relative">
+                           <img
+                              src="/src/assets/img/edible/Champignon.jpg"
+                              alt="Maitake"
+                              class="w-full overflow-hidden rounded-t-lg"
+                              style="max-height: 200px; object-fit: cover"
+                           />
+                        </div>
+                        <div class="px-6 py-4 p-4">
+                           <div class="text-dark text-2xl max-w-md">
+                              <p
+                                 class="text-gray-700 text-base mb-2 text-center"
+                              >
+                                 <span class="font-bold text-primary"
+                                    >Edible</span
+                                 >
+                              </p>
+                              <h2 class="font-bold mb-4 lg:text-xl">
+                                 Champignon
+                              </h2>
+                           </div>
+                           <p class="text-gray-700 text-base mb-4 text-justify">
+                              <span class="font-bold">Nama Latin : </span
+                              >Agaricus bisporus
+                           </p>
+                           <p class="text-gray-700 text-base mb-2 text-justify">
+                              <span class="font-bold">Champignon</span>
+                              , juga dikenal sebagai jamur putih, adalah salah
+                              satu jamur yang paling umum dikonsumsi di seluruh
+                              dunia. Mereka memiliki tudung putih hingga coklat
+                              muda dan biasanya tumbuh di atas tanah.
+                           </p>
+                           <p class="text-gray-700 text-base mb-2 text-justify">
+                              <span class="font-bold">Nutrisi :</span>
+                              <li>
+                                 <span class="font-bold">Kalori :</span> Rendah
+                              </li>
+                              <li>
+                                 <span class="font-bold">Protein :</span> Tinggi
+                              </li>
+                              <li>
+                                 <span class="font-bold">Vitamin :</span> B, D
+                              </li>
+                              <li>
+                                 <span class="font-bold">Mineral :</span>
+                                 selenium, zat besi, zink
+                              </li>
+                           </p>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-2 group">
+                  <a href="detail.html">
+                     <div
+                        class="max-w-sm rounded-lg overflow-hidden shadow-lg border border-gray-300 transition duration-300 transform group-hover:scale-105 lg:font-semibold"
+                     >
+                        <div class="relative">
+                           <img
+                              src="/src/assets/img/edible/Champignon.jpg"
+                              alt="Maitake"
+                              class="w-full overflow-hidden rounded-t-lg"
+                              style="max-height: 200px; object-fit: cover"
+                           />
+                        </div>
+                        <div class="px-6 py-4 p-4">
+                           <div class="text-dark text-2xl max-w-md">
+                              <p
+                                 class="text-gray-700 text-base mb-2 text-center"
+                              >
+                                 <span class="font-bold text-primary"
+                                    >Edible</span
+                                 >
+                              </p>
+                              <h2 class="font-bold mb-4 lg:text-xl">
+                                 Champignon
+                              </h2>
+                           </div>
+                           <p class="text-gray-700 text-base mb-4 text-justify">
+                              <span class="font-bold">Nama Latin : </span
+                              >Agaricus bisporus
+                           </p>
+                           <p class="text-gray-700 text-base mb-2 text-justify">
+                              <span class="font-bold">Champignon</span>
+                              , juga dikenal sebagai jamur putih, adalah salah
+                              satu jamur yang paling umum dikonsumsi di seluruh
+                              dunia. Mereka memiliki tudung putih hingga coklat
+                              muda dan biasanya tumbuh di atas tanah.
+                           </p>
+                           <p class="text-gray-700 text-base mb-2 text-justify">
+                              <span class="font-bold">Nutrisi :</span>
+                              <li>
+                                 <span class="font-bold">Kalori :</span> Rendah
+                              </li>
+                              <li>
+                                 <span class="font-bold">Protein :</span> Tinggi
+                              </li>
+                              <li>
+                                 <span class="font-bold">Vitamin :</span> B, D
+                              </li>
+                              <li>
+                                 <span class="font-bold">Mineral :</span>
+                                 selenium, zat besi, zink
+                              </li>
+                           </p>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-2 group">
+                  <a href="detail.html">
+                     <div
+                        class="max-w-sm rounded-lg overflow-hidden shadow-lg border border-gray-300 transition duration-300 transform group-hover:scale-105 lg:font-semibold"
+                     >
+                        <div class="relative">
+                           <img
+                              src="/src/assets/img/edible/Champignon.jpg"
+                              alt="Maitake"
+                              class="w-full overflow-hidden rounded-t-lg"
+                              style="max-height: 200px; object-fit: cover"
+                           />
+                        </div>
+                        <div class="px-6 py-4 p-4">
+                           <div class="text-dark text-2xl max-w-md">
+                              <p
+                                 class="text-gray-700 text-base mb-2 text-center"
+                              >
+                                 <span class="font-bold text-primary"
+                                    >Edible</span
+                                 >
+                              </p>
+                              <h2 class="font-bold mb-4 lg:text-xl">
+                                 Champignon
+                              </h2>
+                           </div>
+                           <p class="text-gray-700 text-base mb-4 text-justify">
+                              <span class="font-bold">Nama Latin : </span
+                              >Agaricus bisporus
+                           </p>
+                           <p class="text-gray-700 text-base mb-2 text-justify">
+                              <span class="font-bold">Champignon</span>
+                              , juga dikenal sebagai jamur putih, adalah salah
+                              satu jamur yang paling umum dikonsumsi di seluruh
+                              dunia. Mereka memiliki tudung putih hingga coklat
+                              muda dan biasanya tumbuh di atas tanah.
+                           </p>
+                           <p class="text-gray-700 text-base mb-2 text-justify">
+                              <span class="font-bold">Nutrisi :</span>
+                              <li>
+                                 <span class="font-bold">Kalori :</span> Rendah
+                              </li>
+                              <li>
+                                 <span class="font-bold">Protein :</span> Tinggi
+                              </li>
+                              <li>
+                                 <span class="font-bold">Vitamin :</span> B, D
+                              </li>
+                              <li>
+                                 <span class="font-bold">Mineral :</span>
+                                 selenium, zat besi, zink
+                              </li>
+                           </p>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-2 group">
+                  <a href="detail.html">
+                     <div
+                        class="max-w-sm rounded-lg overflow-hidden shadow-lg border border-gray-300 transition duration-300 transform group-hover:scale-105 lg:font-semibold"
+                     >
+                        <div class="relative">
+                           <img
+                              src="/src/assets/img/edible/Champignon.jpg"
+                              alt="Maitake"
+                              class="w-full overflow-hidden rounded-t-lg"
+                              style="max-height: 200px; object-fit: cover"
+                           />
+                        </div>
+                        <div class="px-6 py-4 p-4">
+                           <div class="text-dark text-2xl max-w-md">
+                              <p
+                                 class="text-gray-700 text-base mb-2 text-center"
+                              >
+                                 <span class="font-bold text-primary"
+                                    >Edible</span
+                                 >
+                              </p>
+                              <h2 class="font-bold mb-4 lg:text-xl">
+                                 Champignon
+                              </h2>
+                           </div>
+                           <p class="text-gray-700 text-base mb-4 text-justify">
+                              <span class="font-bold">Nama Latin : </span
+                              >Agaricus bisporus
+                           </p>
+                           <p class="text-gray-700 text-base mb-2 text-justify">
+                              <span class="font-bold">Champignon</span>
+                              , juga dikenal sebagai jamur putih, adalah salah
+                              satu jamur yang paling umum dikonsumsi di seluruh
+                              dunia. Mereka memiliki tudung putih hingga coklat
+                              muda dan biasanya tumbuh di atas tanah.
+                           </p>
+                           <p class="text-gray-700 text-base mb-2 text-justify">
+                              <span class="font-bold">Nutrisi :</span>
+                              <li>
+                                 <span class="font-bold">Kalori :</span> Rendah
+                              </li>
+                              <li>
+                                 <span class="font-bold">Protein :</span> Tinggi
+                              </li>
+                              <li>
+                                 <span class="font-bold">Vitamin :</span> B, D
+                              </li>
+                              <li>
+                                 <span class="font-bold">Mineral :</span>
+                                 selenium, zat besi, zink
+                              </li>
+                           </p>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+            </div>
+         </div>
+         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-full mx-auto text-center mb-6 mt-6">
+               <h4 class="font-semibold text-2xl text-red-600 mb-2">
+                  Inedible
+               </h4>
+            </div>
+            <div class="py-8 flex flex-wrap justify-between">
+               <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-10 group">
+                  <a href="detail.html">
+                     <div
+                        class="max-w-sm rounded-lg overflow-hidden shadow-lg border border-gray-300 transition duration-300 transform group-hover:scale-105"
+                     >
+                        <div class="relative">
+                           <img
+                              src="/src/assets/img/inedible/Death Cap.jpg"
+                              alt="Maitake"
+                              class="w-full overflow-hidden rounded-t-lg"
+                              style="max-height: 200px; object-fit: cover"
+                           />
+                        </div>
+                        <div class="px-6 py-4 p-4">
+                           <div class="text-dark text-2xl max-w-md">
+                              <p
+                                 class="text-gray-700 text-base mb-2 text-center"
+                              >
+                                 <span class="font-bold text-red-500"
+                                    >Inedible</span
+                                 >
+                              </p>
+                              <h2 class="font-bold mb-4 lg:text-xl">
+                                 Daedaleopsis Tricolor
+                              </h2>
+                           </div>
+                           <p class="text-gray-700 text-base mb-4 text-justify">
+                              <span class="font-bold">Nama Latin : </span
+                              >Daedaleopsis confragosa
+                           </p>
+                           <p class="text-gray-700 text-base mb-2 text-justify">
+                              <span class="font-bold"
+                                 >Daedaleopsis tricolor</span
+                              >
+                              adalah kelompok jamur beracun. Sering ditemukan
+                              pada kayu mati di hutan-hutan berdaun dan
+                              campuran. Jamur ini memiliki tudung yang berwarna
+                              coklat kemerahan hingga oranye dengan pola zonasi,
+                              dan porus berwarna putih hingga kekuningan di
+                              bagian bawah tudung.
+                           </p>
+                           <p class="text-gray-700 text-base mb-2 text-justify">
+                              <span class="font-bold">Toksisitas :</span>
+                              Beracun jika dimakan mentah atau kurang dimasak.
+                           </p>
+                           <p class="text-gray-700 text-base mb-2 text-justify">
+                              <span class="font-bold">Gejala :</span> Gejalanya
+                              mungkin muncul setelah beberapa jam hingga
+                              beberapa hari setelah konsumsi, termasuk mual,
+                              muntah, diare, kebingungan, seperti halusinasi,
+                              perubahan persepsi.
+                           </p>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-2 group">
+                  <a href="detail.html">
+                     <div
+                        class="max-w-sm rounded-lg overflow-hidden shadow-lg border border-gray-300 transition duration-300 transform group-hover:scale-105"
+                     >
+                        <div class="relative">
+                           <img
+                              src="/src/assets/img/inedible/Death Cap.jpg"
+                              alt="Maitake"
+                              class="w-full overflow-hidden rounded-t-lg"
+                              style="max-height: 200px; object-fit: cover"
+                           />
+                        </div>
+                        <div class="px-6 py-4 p-4">
+                           <div class="text-dark text-2xl max-w-md">
+                              <p
+                                 class="text-gray-700 text-base mb-2 text-center"
+                              >
+                                 <span class="font-bold text-red-500"
+                                    >Inedible</span
+                                 >
+                              </p>
+                              <h2 class="font-bold mb-4 lg:text-xl">
+                                 Daedaleopsis Tricolor
+                              </h2>
+                           </div>
+                           <p class="text-gray-700 text-base mb-4 text-justify">
+                              <span class="font-bold">Nama Latin : </span
+                              >Daedaleopsis confragosa
+                           </p>
+                           <p class="text-gray-700 text-base mb-2 text-justify">
+                              <span class="font-bold"
+                                 >Daedaleopsis tricolor</span
+                              >
+                              adalah kelompok jamur beracun. Sering ditemukan
+                              pada kayu mati di hutan-hutan berdaun dan
+                              campuran. Jamur ini memiliki tudung yang berwarna
+                              coklat kemerahan hingga oranye dengan pola zonasi,
+                              dan porus berwarna putih hingga kekuningan di
+                              bagian bawah tudung.
+                           </p>
+                           <p class="text-gray-700 text-base mb-2 text-justify">
+                              <span class="font-bold">Toksisitas :</span>
+                              Beracun jika dimakan mentah atau kurang dimasak.
+                           </p>
+                           <p class="text-gray-700 text-base mb-2 text-justify">
+                              <span class="font-bold">Gejala :</span> Gejalanya
+                              mungkin muncul setelah beberapa jam hingga
+                              beberapa hari setelah konsumsi, termasuk mual,
+                              muntah, diare, kebingungan, seperti halusinasi,
+                              perubahan persepsi.
+                           </p>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-2 group">
+                  <a href="detail.html">
+                     <div
+                        class="max-w-sm rounded-lg overflow-hidden shadow-lg border border-gray-300 transition duration-300 transform group-hover:scale-105"
+                     >
+                        <div class="relative">
+                           <img
+                              src="/src/assets/img/inedible/Death Cap.jpg"
+                              alt="Maitake"
+                              class="w-full overflow-hidden rounded-t-lg"
+                              style="max-height: 200px; object-fit: cover"
+                           />
+                        </div>
+                        <div class="px-6 py-4 p-4">
+                           <div class="text-dark text-2xl max-w-md">
+                              <p
+                                 class="text-gray-700 text-base mb-2 text-center"
+                              >
+                                 <span class="font-bold text-red-500"
+                                    >Inedible</span
+                                 >
+                              </p>
+                              <h2 class="font-bold mb-4 lg:text-xl">
+                                 Daedaleopsis Tricolor
+                              </h2>
+                           </div>
+                           <p class="text-gray-700 text-base mb-4 text-justify">
+                              <span class="font-bold">Nama Latin : </span
+                              >Daedaleopsis confragosa
+                           </p>
+                           <p class="text-gray-700 text-base mb-2 text-justify">
+                              <span class="font-bold"
+                                 >Daedaleopsis tricolor</span
+                              >
+                              adalah kelompok jamur beracun. Sering ditemukan
+                              pada kayu mati di hutan-hutan berdaun dan
+                              campuran. Jamur ini memiliki tudung yang berwarna
+                              coklat kemerahan hingga oranye dengan pola zonasi,
+                              dan porus berwarna putih hingga kekuningan di
+                              bagian bawah tudung.
+                           </p>
+                           <p class="text-gray-700 text-base mb-2 text-justify">
+                              <span class="font-bold">Toksisitas :</span>
+                              Beracun jika dimakan mentah atau kurang dimasak.
+                           </p>
+                           <p class="text-gray-700 text-base mb-2 text-justify">
+                              <span class="font-bold">Gejala :</span> Gejalanya
+                              mungkin muncul setelah beberapa jam hingga
+                              beberapa hari setelah konsumsi, termasuk mual,
+                              muntah, diare, kebingungan, seperti halusinasi,
+                              perubahan persepsi.
+                           </p>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-2 group">
+                  <a href="detail.html">
+                     <div
+                        class="max-w-sm rounded-lg overflow-hidden shadow-lg border border-gray-300 transition duration-300 transform group-hover:scale-105"
+                     >
+                        <div class="relative">
+                           <img
+                              src="/src/assets/img/inedible/Death Cap.jpg"
+                              alt="Maitake"
+                              class="w-full overflow-hidden rounded-t-lg"
+                              style="max-height: 200px; object-fit: cover"
+                           />
+                        </div>
+                        <div class="px-6 py-4 p-4">
+                           <div class="text-dark text-2xl max-w-md">
+                              <p
+                                 class="text-gray-700 text-base mb-2 text-center"
+                              >
+                                 <span class="font-bold text-red-500"
+                                    >Inedible</span
+                                 >
+                              </p>
+                              <h2 class="font-bold mb-4 lg:text-xl">
+                                 Daedaleopsis Tricolor
+                              </h2>
+                           </div>
+                           <p class="text-gray-700 text-base mb-4 text-justify">
+                              <span class="font-bold">Nama Latin : </span
+                              >Daedaleopsis confragosa
+                           </p>
+                           <p class="text-gray-700 text-base mb-2 text-justify">
+                              <span class="font-bold"
+                                 >Daedaleopsis tricolor</span
+                              >
+                              adalah kelompok jamur beracun. Sering ditemukan
+                              pada kayu mati di hutan-hutan berdaun dan
+                              campuran. Jamur ini memiliki tudung yang berwarna
+                              coklat kemerahan hingga oranye dengan pola zonasi,
+                              dan porus berwarna putih hingga kekuningan di
+                              bagian bawah tudung.
+                           </p>
+                           <p class="text-gray-700 text-base mb-2 text-justify">
+                              <span class="font-bold">Toksisitas :</span>
+                              Beracun jika dimakan mentah atau kurang dimasak.
+                           </p>
+                           <p class="text-gray-700 text-base mb-2 text-justify">
+                              <span class="font-bold">Gejala :</span> Gejalanya
+                              mungkin muncul setelah beberapa jam hingga
+                              beberapa hari setelah konsumsi, termasuk mual,
+                              muntah, diare, kebingungan, seperti halusinasi,
+                              perubahan persepsi.
+                           </p>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-2 group">
+                  <a href="detail.html">
+                     <div
+                        class="max-w-sm rounded-lg overflow-hidden shadow-lg border border-gray-300 transition duration-300 transform group-hover:scale-105"
+                     >
+                        <div class="relative">
+                           <img
+                              src="/src/assets/img/inedible/Death Cap.jpg"
+                              alt="Maitake"
+                              class="w-full overflow-hidden rounded-t-lg"
+                              style="max-height: 200px; object-fit: cover"
+                           />
+                        </div>
+                        <div class="px-6 py-4 p-4">
+                           <div class="text-dark text-2xl max-w-md">
+                              <p
+                                 class="text-gray-700 text-base mb-2 text-center"
+                              >
+                                 <span class="font-bold text-red-500"
+                                    >Inedible</span
+                                 >
+                              </p>
+                              <h2 class="font-bold mb-4 lg:text-xl">
+                                 Daedaleopsis Tricolor
+                              </h2>
+                           </div>
+                           <p class="text-gray-700 text-base mb-4 text-justify">
+                              <span class="font-bold">Nama Latin : </span
+                              >Daedaleopsis confragosa
+                           </p>
+                           <p class="text-gray-700 text-base mb-2 text-justify">
+                              <span class="font-bold"
+                                 >Daedaleopsis tricolor</span
+                              >
+                              adalah kelompok jamur beracun. Sering ditemukan
+                              pada kayu mati di hutan-hutan berdaun dan
+                              campuran. Jamur ini memiliki tudung yang berwarna
+                              coklat kemerahan hingga oranye dengan pola zonasi,
+                              dan porus berwarna putih hingga kekuningan di
+                              bagian bawah tudung.
+                           </p>
+                           <p class="text-gray-700 text-base mb-2 text-justify">
+                              <span class="font-bold">Toksisitas :</span>
+                              Beracun jika dimakan mentah atau kurang dimasak.
+                           </p>
+                           <p class="text-gray-700 text-base mb-2 text-justify">
+                              <span class="font-bold">Gejala :</span> Gejalanya
+                              mungkin muncul setelah beberapa jam hingga
+                              beberapa hari setelah konsumsi, termasuk mual,
+                              muntah, diare, kebingungan, seperti halusinasi,
+                              perubahan persepsi.
+                           </p>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-2 group">
+                  <a href="detail.html">
+                     <div
+                        class="max-w-sm rounded-lg overflow-hidden shadow-lg border border-gray-300 transition duration-300 transform group-hover:scale-105"
+                     >
+                        <div class="relative">
+                           <img
+                              src="/src/assets/img/inedible/Death Cap.jpg"
+                              alt="Maitake"
+                              class="w-full overflow-hidden rounded-t-lg"
+                              style="max-height: 200px; object-fit: cover"
+                           />
+                        </div>
+                        <div class="px-6 py-4 p-4">
+                           <div class="text-dark text-2xl max-w-md">
+                              <p
+                                 class="text-gray-700 text-base mb-2 text-center"
+                              >
+                                 <span class="font-bold text-red-500"
+                                    >Inedible</span
+                                 >
+                              </p>
+                              <h2 class="font-bold mb-4 lg:text-xl">
+                                 Daedaleopsis Tricolor
+                              </h2>
+                           </div>
+                           <p class="text-gray-700 text-base mb-4 text-justify">
+                              <span class="font-bold">Nama Latin : </span
+                              >Daedaleopsis confragosa
+                           </p>
+                           <p class="text-gray-700 text-base mb-2 text-justify">
+                              <span class="font-bold"
+                                 >Daedaleopsis tricolor</span
+                              >
+                              adalah kelompok jamur beracun. Sering ditemukan
+                              pada kayu mati di hutan-hutan berdaun dan
+                              campuran. Jamur ini memiliki tudung yang berwarna
+                              coklat kemerahan hingga oranye dengan pola zonasi,
+                              dan porus berwarna putih hingga kekuningan di
+                              bagian bawah tudung.
+                           </p>
+                           <p class="text-gray-700 text-base mb-2 text-justify">
+                              <span class="font-bold">Toksisitas :</span>
+                              Beracun jika dimakan mentah atau kurang dimasak.
+                           </p>
+                           <p class="text-gray-700 text-base mb-2 text-justify">
+                              <span class="font-bold">Gejala :</span> Gejalanya
+                              mungkin muncul setelah beberapa jam hingga
+                              beberapa hari setelah konsumsi, termasuk mual,
+                              muntah, diare, kebingungan, seperti halusinasi,
+                              perubahan persepsi.
+                           </p>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div class="w-full md:w-1/2 lg:w-1/4 px-4 mb-2 group">
+                  <a href="detail.html">
+                     <div
+                        class="max-w-sm rounded-lg overflow-hidden shadow-lg border border-gray-300 transition duration-300 transform group-hover:scale-105"
+                     >
+                        <div class="relative">
+                           <img
+                              src="/src/assets/img/inedible/Death Cap.jpg"
+                              alt="Maitake"
+                              class="w-full overflow-hidden rounded-t-lg"
+                              style="max-height: 200px; object-fit: cover"
+                           />
+                        </div>
+                        <div class="px-6 py-4 p-4">
+                           <div class="text-dark text-2xl max-w-md">
+                              <p
+                                 class="text-gray-700 text-base mb-2 text-center"
+                              >
+                                 <span class="font-bold text-red-500"
+                                    >Inedible</span
+                                 >
+                              </p>
+                              <h2 class="font-bold mb-4 lg:text-xl">
+                                 Daedaleopsis Tricolor
+                              </h2>
+                           </div>
+                           <p class="text-gray-700 text-base mb-4 text-justify">
+                              <span class="font-bold">Nama Latin : </span
+                              >Daedaleopsis confragosa
+                           </p>
+                           <p class="text-gray-700 text-base mb-2 text-justify">
+                              <span class="font-bold"
+                                 >Daedaleopsis tricolor</span
+                              >
+                              adalah kelompok jamur beracun. Sering ditemukan
+                              pada kayu mati di hutan-hutan berdaun dan
+                              campuran. Jamur ini memiliki tudung yang berwarna
+                              coklat kemerahan hingga oranye dengan pola zonasi,
+                              dan porus berwarna putih hingga kekuningan di
+                              bagian bawah tudung.
+                           </p>
+                           <p class="text-gray-700 text-base mb-2 text-justify">
+                              <span class="font-bold">Toksisitas :</span>
+                              Beracun jika dimakan mentah atau kurang dimasak.
+                           </p>
+                           <p class="text-gray-700 text-base mb-2 text-justify">
+                              <span class="font-bold">Gejala :</span> Gejalanya
+                              mungkin muncul setelah beberapa jam hingga
+                              beberapa hari setelah konsumsi, termasuk mual,
+                              muntah, diare, kebingungan, seperti halusinasi,
+                              perubahan persepsi.
+                           </p>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- Scanner Section End -->
+
+      <!-- Footer -->
+      <footer class="bg-sail">
+         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div
+               class="py-8 flex flex-col md:flex-row items-center justify-between"
+            >
+               <p class="text-sm font-bold text-saildark">
+                  © Mushroom Scanner 2024 ® - Your Mushroom Scanner
+               </p>
+               <div class="flex-shrink-0">
+                  <img
+                     src="/src/assets/img/icon/Mushroom_logo.png"
+                     class="w-9 h-9"
+                     alt="Logo"
+                  />
+               </div>
+            </div>
+         </div>
+      </footer>
+      <!-- Footer End -->
+      <script src="/src/assets/js/script.js"></script>
+   </body>
+</html>
