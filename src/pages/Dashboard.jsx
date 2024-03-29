@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const Dashboard = () => {
   const [imagePreview, setImagePreview] = useState(null);
   const [formData, setFormData] = useState({
-    name: '',
+    name: "",
     image: null,
   });
 
@@ -35,29 +35,30 @@ const Dashboard = () => {
 
     try {
       const formDataToSend = new FormData();
-      formDataToSend.append('name', formData.name);
-      formDataToSend.append('image', formData.image);
+      formDataToSend.append("name", formData.name);
+      formDataToSend.append("image", formData.image);
 
-      const response = await fetch('http://mymushroom.my.id/user-mushroom', {
-        method: 'POST',
+      const response = await fetch("https://mymushroom.my.id/user-mushroom", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
-          "Authorization": `Bearer ${accessToken}`,
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${accessToken}`,
           // Jika diperlukan, tambahkan header authorization di sini
         },
         body: formDataToSend,
       });
 
+      console.log(response);
       if (response.ok) {
         // Data berhasil dikirim, tambahkan logika yang sesuai di sini
-        alert('data berhasil diinput')
+        alert("data berhasil diinput");
 
-        console.log('Data berhasil dikirim');
+        console.log("Data berhasil dikirim");
       } else {
-        console.error('Gagal mengirim data:', response.statusText);
+        console.error("Gagal mengirim data:", response);
       }
     } catch (error) {
-      console.error('Error:', error);
+      console.error("Error:", error);
     }
   };
 
@@ -67,8 +68,12 @@ const Dashboard = () => {
         <div className="container max-w-screen-xl mx-auto">
           <div className="w-full px-4">
             <div className="max-w-full mx-auto text-center mb-2">
-              <h4 className="font-semibold text-lg text-primary mb-2">Mushroom Detector</h4>
-              <h2 className="font-bold text-saildark text-3xl mb-4">Mushroom Detector</h2>
+              <h4 className="font-semibold text-lg text-primary mb-2">
+                Mushroom Detector
+              </h4>
+              <h2 className="font-bold text-saildark text-3xl mb-4">
+                Mushroom Detector
+              </h2>
             </div>
             <div className="max-w-full mx-auto text-center mb-2 group">
               <form onSubmit={handleSubmit}>
@@ -84,8 +89,7 @@ const Dashboard = () => {
                   />
                 </div>
                 <div className="flex items-center justify-center lg:w-full lg:h-64 mt-6 bg-sailsem rounded-lg">
-                  
-                {imagePreview ? (
+                  {imagePreview ? (
                     <img
                       src={imagePreview}
                       alt="Preview"
@@ -109,13 +113,16 @@ const Dashboard = () => {
                             strokeLinecap="round"
                             strokeLinejoin="round"
                             strokeWidth="2"
-                            d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"
+                            i="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"
                           />
                         </svg>
                         <p className="mb-2 text-sm text-white">
-                          <span className="font-semibold">Click to upload</span> or drag and drop
+                          <span className="font-semibold">Click to upload</span>{" "}
+                          or drag and drop
                         </p>
-                        <p className="text-xs text-white">SVG, PNG, JPG or GIF (MAX. 800x400px)</p>
+                        <p className="text-xs text-white">
+                          SVG, PNG, JPG or GIF (MAX. 800x400px)
+                        </p>
                       </div>
                       <input
                         name="image"
@@ -126,7 +133,6 @@ const Dashboard = () => {
                       />
                     </label>
                   )}
-      
                 </div>
                 <button
                   type="submit"

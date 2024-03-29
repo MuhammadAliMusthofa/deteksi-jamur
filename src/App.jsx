@@ -6,28 +6,29 @@ import Mushroom from "./pages/Mushrooms";
 import Detail from "./pages/DetailMushroom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import About from "./pages/About";
 
 function App() {
   const location = useLocation();
-  const hideNavbar = location.pathname === '/' || location.pathname === '/register'  ; // Sembunyikan Navbar jika rute aktif adalah '/login'
-  const hideFooter = location.pathname === '/' || location.pathname === '/register'  ; // Sembunyikan Navbar jika rute aktif adalah '/login'
+  const sharedLayout =
+    location.pathname === "/" || location.pathname === "/register";
   return (
     <div className="app">
       <main className="content">
-      {!hideNavbar && <Navbar/>} {/* Tampilkan Navbar jika hideNavbar bernilai false */}
+        {!sharedLayout && <Navbar />}
+        {/* Tampilkan Navbar jika hideNavbar bernilai false */}
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/history" element={<Dashboard />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/home" element={<Dashboard />} />
-          <Route path="/about" element={<Dashboard />} />
+          <Route path="/about" element={<About />} />
           <Route path="/jamur" element={<Mushroom />} />
           <Route path="/history" element={<Dashboard />} />
           <Route path="/mushroom-detail/:name" element={<Detail />} />
         </Routes>
-        
-        {!hideFooter && <Footer/>} 
+        {!sharedLayout && <Footer />}
       </main>
     </div>
   );

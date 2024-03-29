@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const MushroomDetailPage = () => {
   const [mushroom, setMushroom] = useState(null);
@@ -43,23 +43,37 @@ const MushroomDetailPage = () => {
                     Jamur Ditemukan
                   </h4>
                   <h2 className="font-bold text-saildark text-3xl mb-4">
-                    {mushroom.name.replace(/_/g, ' ')}
+                    {mushroom.name.replace(/_/g, " ")}
                   </h2>
                   <p className="font-medium text-md text-secondary mb-4">
                     {mushroom.type}
                   </p>
                   <p className="font-medium text-md text-saildark">
-                    <span className="font-bold">Nama Latin : </span>{mushroom.name}
+                    <span className="font-bold">Nama Latin : </span>
+                    {mushroom.name}
                   </p>
                   <p className="font-medium text-md text-saildark">
-                    <span className="font-bold">Deskripsi: </span>{mushroom.deskripsi}
+                    <span className="font-bold">Deskripsi: </span>
+                    {mushroom.deskripsi}
                   </p>
                   <p className="font-medium text-md text-saildark">
                     <span className="font-bold">Nutrisi :</span>
-                    <li><span className="font-bold text-saildark">Kalori :</span> {mushroom.kalori ? mushroom.kalori : 'N/A'}</li>
-                    <li><span className="font-bold text-saildark">Protein :</span> {mushroom.protein ? mushroom.protein : 'N/A'}</li>
-                    <li><span className="font-bold text-saildark">Vitamin :</span> {mushroom.vitamin ? mushroom.vitamin : 'N/A'}</li>
-                    <li className="mb-4"><span className="font-bold text-saildark">Mineral :</span> {mushroom.mineral ? mushroom.mineral : 'N/A'}</li>
+                    <li>
+                      <span className="font-bold text-saildark">Kalori :</span>{" "}
+                      {mushroom.kalori ? mushroom.kalori : "N/A"}
+                    </li>
+                    <li>
+                      <span className="font-bold text-saildark">Protein :</span>{" "}
+                      {mushroom.protein ? mushroom.protein : "N/A"}
+                    </li>
+                    <li>
+                      <span className="font-bold text-saildark">Vitamin :</span>{" "}
+                      {mushroom.vitamin ? mushroom.vitamin : "N/A"}
+                    </li>
+                    <li className="mb-4">
+                      <span className="font-bold text-saildark">Mineral :</span>{" "}
+                      {mushroom.mineral ? mushroom.mineral : "N/A"}
+                    </li>
                   </p>
                   <Link
                     to="/dashboard"
@@ -77,6 +91,6 @@ const MushroomDetailPage = () => {
       )}
     </div>
   );
-}
+};
 
 export default MushroomDetailPage;
