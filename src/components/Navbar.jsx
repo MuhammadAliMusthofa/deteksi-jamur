@@ -37,18 +37,18 @@ function Navbar() {
       const fixedNav = header.offsetTop;
 
       if (window.pageYOffset > fixedNav) {
-        header.classList.add("navbar-fixed");
+        header.classNameList.add("navbar-fixed");
       } else {
-        header.classList.remove("navbar-fixed");
+        header.classNameList.remove("navbar-fixed");
       }
     };
 
     // Tambahkan event listener saat komponen dimuat
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     // Membersihkan event listener saat komponen dilepas
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []); // Penambahan dependensi kosong untuk memastikan efek hanya dijalankan sekali saat komponen dimuat
 
@@ -57,18 +57,18 @@ function Navbar() {
     const handleHamburgerClick = () => {
       const hamburger = document.querySelector("#hamburger");
       const navMenu = document.querySelector("#nav-menu");
-      
+
       hamburger.classList.toggle("hamburger-active");
       navMenu.classList.toggle("hidden");
     };
 
     // Tambahkan event listener saat komponen dimuat
     const hamburger = document.querySelector("#hamburger");
-    hamburger.addEventListener('click', handleHamburgerClick);
+    hamburger.addEventListener("click", handleHamburgerClick);
 
     // Membersihkan event listener saat komponen dilepas
     return () => {
-      hamburger.removeEventListener('click', handleHamburgerClick);
+      hamburger.removeEventListener("click", handleHamburgerClick);
     };
   }, []); // Penambahan dependensi kosong untuk memastikan efek hanya dijalankan sekali saat komponen dimuat
 
@@ -178,11 +178,11 @@ function Navbar() {
                   class="font-bold text-lg text-primary block py-6"
                >
                   <img
-                     src="/src/assets/img/icon/Mushroom_logo.png"
-                     alt="Logo"
-                     height="35"
-                     width="43"
-                     class="max-w-full mx-auto mr-4"
+                    src="src/assets/svg/logout-svgrepo-com.svg"
+                    alt="Logout"
+                    height="3"
+                    width="15"
+                    className="mr-3"
                   />
                </Link>
             </div>

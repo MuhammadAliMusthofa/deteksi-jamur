@@ -1,5 +1,4 @@
 import { Routes, Route, useLocation } from "react-router-dom";
-import Front from "./pages/Mushroom";
 import Login from "./pages/Login";
 import Register from "./fragments/regis-form/RegisForm";
 import Dashboard from "./pages/Dashboard";
@@ -19,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/history" element={<Dashboard />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/home" element={<Dashboard />} />
           <Route path="/about" element={<Dashboard />} />
