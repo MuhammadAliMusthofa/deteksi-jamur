@@ -20,4 +20,4 @@ const loginValidation = (data, setDelay) => {
   return datas;
 };
 
-export { loginValidation };
+export { loginValidation, jange };

@@ -10,11 +10,10 @@ function LoginForm() {
     username: "",
     password: "",
   });
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setDelay(true);
-    
+
     try {
       // Mengirim data login ke API
       const response = await fetch("https://mymushroom.my.id/login", {
@@ -34,7 +33,7 @@ function LoginForm() {
         navigate("/dashboard");
       } else {
         // Handle error response from API
-        console.error("Login failed:", response.statusText);
+        console.error("Login failed:", response.message);
       }
     } catch (error) {
       console.error("Error logging in user:", error);
@@ -61,7 +60,7 @@ function LoginForm() {
     <div className="wrapper-one">
       <div className="wrapper">
         <form onSubmit={(e) => handleSubmit(e)}>
-          <h1>Log Fucking Gin</h1>
+          <h1>Login</h1>
           <div className="input-box">
             <input
               type="text"
@@ -80,7 +79,7 @@ function LoginForm() {
               required
             />
           </div>
-         
+
           <button type="submit" className="btn" disabled={delay}>
             {delay ? "Waiting..." : "Login"}
           </button>

@@ -1,18 +1,6 @@
-import face from "../assets/img/about/face.jpg";
+import face from "../assets/img/about/face2.png";
 import erzie from "../assets/img/about/erzie.png";
 const dataPerson = [
-  {
-    id: 1,
-    imageProfile: face,
-    name: "Muammar Rizal",
-    jobDesk: "Web Developer",
-    whatsappLink: "",
-    instagramLink: "",
-    linkedinLInk: "",
-    githubLink: "",
-    facebookLink: "",
-    webMoney: " ",
-  },
   {
     id: 1,
     imageProfile: face,
@@ -89,6 +77,18 @@ const dataPerson = [
     id: 7,
     imageProfile: face,
     name: "Cindy",
+    jobDesk: "Web Developer",
+    whatsappLink: "",
+    instagramLink: "",
+    linkedinLInk: "",
+    githubLink: "",
+    facebookLink: "",
+    webMoney: " ",
+  },
+  {
+    id: 10,
+    imageProfile: face,
+    name: "Lufy",
     jobDesk: "Web Developer",
     whatsappLink: "",
     instagramLink: "",
