@@ -37,9 +37,9 @@ function Navbar() {
       const fixedNav = header.offsetTop;
 
       if (window.pageYOffset > fixedNav) {
-        header.classList.add("navbar-fixed");
+        header.classNameList.add("navbar-fixed");
       } else {
-        header.classList.remove("navbar-fixed");
+        header.classNameList.remove("navbar-fixed");
       }
     };
 
@@ -118,7 +118,7 @@ function Navbar() {
                 </li>
                 <li className="group">
                   <Link
-                    to="/about"
+                    href="/about"
                     className="text-base font-bold text-saildark py-2 mx-8 group-hover:text-primary flex"
                   >
                     About
@@ -210,7 +210,7 @@ function Navbar() {
               </li>
               <li className="group">
                 <Link
-                  href="/about"
+                  to="/about"
                   className="text-base font-bold text-saildark py-2 mx-8 group-hover:text-primary flex"
                 >
                   About
