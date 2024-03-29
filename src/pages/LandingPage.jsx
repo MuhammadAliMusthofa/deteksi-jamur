@@ -3,6 +3,8 @@ import React from "react";
 function LandingPage() {
   return (
     <>
+      <h2 className="font-bold text-saildark text-3xl mb-4">Mushroom Detector</h2>
+
       <section id="about" className="pt-36 pb-32 bg-slate-100">
         <div className="container">
           <div className="flex flex-wrap justify-center">

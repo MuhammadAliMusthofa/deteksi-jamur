@@ -4,6 +4,7 @@ import Register from "./fragments/regis-form/RegisForm";
 import Dashboard from "./pages/Dashboard";
 import Mushroom from "./pages/Mushrooms";
 import Detail from "./pages/DetailMushroom";
+import Detect from "./pages/LandingPage";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -24,6 +25,7 @@ function App() {
           <Route path="/about" element={<Dashboard />} />
           <Route path="/jamur" element={<Mushroom />} />
           <Route path="/history" element={<Dashboard />} />
+          <Route path="/detect" element={<Detect />} />
           <Route path="/mushroom-detail/:name" element={<Detail />} />
         </Routes>
         
