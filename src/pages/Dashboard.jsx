@@ -34,10 +34,9 @@ const Dashboard = () => {
       formDataToSend.append("name", formData.name);
       formDataToSend.append("image", formData.image);
 
-      const response = await fetch("http://mymushroom.my.id/user-mushroom", {
+      const response = await fetch("http://127.0.0.1:5000/user-mushroom", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
           Authorization: `Bearer ${accessToken}`,
           // Jika diperlukan, tambahkan header authorization di sini
         },

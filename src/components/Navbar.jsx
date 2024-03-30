@@ -35,11 +35,10 @@ function Navbar() {
     const handleScroll = () => {
       const header = document.querySelector("header");
       const fixedNav = header.offsetTop;
-
-      if (window.pageYOffset > fixedNav) {
-        header.classNameList.add("navbar-fixed");
+      if (window.scrollY > fixedNav) {
+        header.classList.add("navbar-fixed");
       } else {
-        header.classNameList.remove("navbar-fixed");
+        header.classList.remove("navbar-fixed");
       }
     };
 

@@ -16,7 +16,7 @@ function LoginForm() {
 
     try {
       // Mengirim data login ke API
-      const response = await fetch("https://mymushroom.my.id/login", {
+      const response = await fetch(" http://127.0.0.1:5000/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

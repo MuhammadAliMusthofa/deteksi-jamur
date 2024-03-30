@@ -4,6 +4,7 @@ import Register from "./fragments/regis-form/RegisForm";
 import Dashboard from "./pages/Dashboard";
 import Mushroom from "./pages/Mushrooms";
 import Detail from "./pages/DetailMushroom";
+import UserMushroomDetail from "./pages/DetailUserMushroom";
 import Detect from "./pages/DetectPage";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -30,6 +31,10 @@ function App() {
           <Route path="/detect" element={<Detect />} />
           <Route path="/history" element={<History />} />
           <Route path="/mushroom-detail/:name" element={<Detail />} />
+          <Route
+            path="/mushroom-detail/:id/:name"
+            element={<UserMushroomDetail />}
+          />
         </Routes>
         {!sharedLayout && <Footer />}
       </main>

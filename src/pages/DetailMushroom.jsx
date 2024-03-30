@@ -4,15 +4,26 @@ import { Link } from "react-router-dom";
 
 const MushroomDetailPage = () => {
   const [mushroom, setMushroom] = useState(null);
+  const [predict, setPredict] = useState(null);
   const { name } = useParams();
 
   useEffect(() => {
     fetchMushroomDetail();
   }, []);
+  const accessToken = sessionStorage.getItem("access_token");
 
   const fetchMushroomDetail = async () => {
     try {
-      const response = await fetch(`http://mymushroom.my.id/mushroom/${name}`);
+      const response = await fetch(
+        `http://127.0.0.1:5000/user-mushroom/${name}`,
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${accessToken}`,
+          },
+        }
+      );
+
       const data = await response.json();
       if (response.ok) {
         setMushroom(data.data);
@@ -24,6 +35,29 @@ const MushroomDetailPage = () => {
     }
   };
 
+  const fetchPredict = async () => {
+    try {
+      const response = await fetch(`http://127.0.0.1:5000/predict-mushroom`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${accessToken}`,
+        },
+        body: JSON.stringify({ image_name: name }), // Mengirim data JSON dengan format yang benar
+      });
+
+      const data = await response.json();
+      console.log(data);
+      if (response.ok) {
+        setPredict(data.data);
+      } else {
+        console.error("Failed to fetch mushroom prediction:", data.message);
+      }
+    } catch (error) {
+      console.error("Error fetching mushroom prediction:", error);
+    }
+  };
+
   return (
     <div>
       {mushroom ? (
@@ -32,7 +66,7 @@ const MushroomDetailPage = () => {
             <div className="flex flex-wrap justify-center">
               <div className="w-full px-4 mb-10 lg:w-1/3">
                 <img
-                  src={`/src/assets/img/${mushroom.type}/${mushroom.name}.jpg`}
+                  src={mushroom.path}
                   alt="Jamur Hasil"
                   className="rounded-lg"
                 />
@@ -50,11 +84,11 @@ const MushroomDetailPage = () => {
                   </p>
                   <p className="font-medium text-md text-saildark">
                     <span className="font-bold">Nama Latin : </span>
-                    {mushroom.name}
+                    {predict ? predict.name : "loading..."}
                   </p>
                   <p className="font-medium text-md text-saildark">
                     <span className="font-bold">Deskripsi: </span>
-                    {mushroom.deskripsi}
+                    {predict ? predict.deskripsi : "loading.."}
                   </p>
                   <p className="font-medium text-md text-saildark">
                     <span className="font-bold">Nutrisi :</span>
@@ -64,23 +98,23 @@ const MushroomDetailPage = () => {
                     </li>
                     <li>
                       <span className="font-bold text-saildark">Protein :</span>{" "}
-                      {mushroom.protein ? mushroom.protein : "N/A"}
+                      {predict ? predict.content.protein : "loading..."}
                     </li>
                     <li>
                       <span className="font-bold text-saildark">Vitamin :</span>{" "}
-                      {mushroom.vitamin ? mushroom.vitamin : "N/A"}
+                      {predict ? predict.content.vitamin : "loading..."}
                     </li>
                     <li className="mb-4">
                       <span className="font-bold text-saildark">Mineral :</span>{" "}
-                      {mushroom.mineral ? mushroom.mineral : "N/A"}
+                      {predict ? predict.content.mineral : "loading..."}
                     </li>
                   </p>
-                  <Link
-                    to="/dashboard"
+                  <button
+                    onClick={fetchPredict}
                     className="h-full rounded-lg px-4 py-2 bg-blue-500 text-blue-100 hover:bg-blue-600 duration-300"
                   >
                     Scan Jamur Lagi
-                  </Link>
+                  </button>
                 </div>
               </div>
             </div>
