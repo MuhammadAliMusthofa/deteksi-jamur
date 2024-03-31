@@ -12,34 +12,34 @@ import About from "./pages/About";
 import History from "./pages/History";
 
 function App() {
-  const location = useLocation();
-  const sharedLayout =
-    location.pathname === "/" || location.pathname === "/register";
-  return (
-    <div className="app">
-      <main className="content">
-        {!sharedLayout && <Navbar />}
-        {/* Tampilkan Navbar jika hideNavbar bernilai false */}
-        <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/home" element={<Dashboard />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/jamur" element={<Mushroom />} />
-          {/* <Route path="/history" element={<Dashboard />} /> */}
-          <Route path="/detect" element={<Detect />} />
-          <Route path="/history" element={<History />} />
-          <Route path="/mushroom-detail/:name" element={<Detail />} />
-          <Route
-            path="/mushroom-detail/:id/:name"
-            element={<UserMushroomDetail />}
-          />
-        </Routes>
-        {!sharedLayout && <Footer />}
-      </main>
-    </div>
-  );
+   const location = useLocation();
+   const sharedLayout =
+      location.pathname === "/" || location.pathname === "/register";
+   return (
+      <div className="app">
+         <main className="content">
+            {!sharedLayout && <Navbar />}
+            {/* Tampilkan Navbar jika hideNavbar bernilai false */}
+            <Routes>
+               <Route path="/" element={<Login />} />
+               <Route path="/register" element={<Register />} />
+               <Route path="/dashboard" element={<Dashboard />} />
+               <Route path="/home" element={<Dashboard />} />
+               <Route path="/about" element={<About />} />
+               <Route path="/jamur" element={<Mushroom />} />
+               {/* <Route path="/history" element={<Dashboard />} /> */}
+               {/* <Route path="/detect" element={<Detect />} /> */}
+               {/* <Route path="/history" element={<History />} /> */}
+               <Route path="/mushroom-detail/:name" element={<Detail />} />
+               <Route
+                  path="/mushroom-detail/:id/:name"
+                  element={<UserMushroomDetail />}
+               />
+            </Routes>
+            {!sharedLayout && <Footer />}
+         </main>
+      </div>
+   );
 }
 
 export default App;

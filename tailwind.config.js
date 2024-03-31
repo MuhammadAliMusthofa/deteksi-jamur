@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-   content: ["./*.{html,js}"],
+   content: ["./*.{html,jsx,js}"],
    theme: {
       container: {
          center: true,
@@ -19,6 +19,12 @@ module.exports = {
             sailmed: "#0d81bc",
             saildark: "#114969",
          },
+      },
+   },
+   variants: {
+      extend: {
+         scale: ["responsive", "hover", "focus"],
+         backgroundColor: ["responsive", "hover", "focus"],
       },
    },
    plugins: [],
