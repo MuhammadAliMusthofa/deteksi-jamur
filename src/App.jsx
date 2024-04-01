@@ -14,15 +14,15 @@ import History from "./pages/History";
 function App() {
    const location = useLocation();
    const sharedLayout =
-      location.pathname === "/" || location.pathname === "/register";
+      location.pathname === "/" || location.pathname === "/login";
    return (
       <div className="app">
          <main className="content">
             {!sharedLayout && <Navbar />}
             {/* Tampilkan Navbar jika hideNavbar bernilai false */}
             <Routes>
-               <Route path="/" element={<Login />} />
-               <Route path="/register" element={<Register />} />
+               <Route path="/" element={<Register />} />
+               <Route path="/login" element={<Login />} />
                <Route path="/dashboard" element={<Dashboard />} />
                <Route path="/home" element={<Dashboard />} />
                <Route path="/about" element={<About />} />

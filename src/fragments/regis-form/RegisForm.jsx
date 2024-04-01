@@ -27,7 +27,7 @@ function RegistrationForm() {
 
          if (response.ok) {
             // Navigasi ke halaman login setelah registrasi berhasil
-            navigate("/");
+            navigate("/login");
          } else {
             // Handle error response from API
             console.error("Registration failed:", response.statusText);
@@ -67,9 +67,23 @@ function RegistrationForm() {
                   />
                </div>
 
-               <button type="submit" className="btn" disabled={delay}>
+               <button
+                  type="submit"
+                  className="block mx-auto px-6 py-3 w-full rounded-full bg-sailsem text-white font-semibold focus:outline-none transition duration-300 transform hover:scale-105 hover:bg-sailmed shadow-lg"
+                  disabled={delay}
+               >
                   {delay ? "Waiting..." : "Register"}
                </button>
+               <hr className="border-gray-300 my-4" />
+               <p className="text-center">
+                  Already Have an Account?{" "}
+                  <a
+                     href="/login"
+                     className="text-sail font-semibold focus:outline-none transition duration-300 transform hover:scale-105  shadow-lg"
+                  >
+                     Login
+                  </a>
+               </p>
             </form>
          </div>
       </div>

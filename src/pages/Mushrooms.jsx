@@ -57,33 +57,97 @@ const Mushrooms = () => {
    const renderUserMushrooms = (mushrooms) => {
       return mushrooms.map((mushroom) => {
          return (
+            // <div
+            //    key={mushroom.id}
+            //    className="w-full md:w-1/2 lg:w-1/4 px-4 mb-8 group"
+            // >
+            //    <Link
+            //       to={`/mushroom-detail/${encodeURIComponent(mushroom.name)}`}
+            //    >
+            //       <img
+            //          className="w-full h-48 object-fit rounded-t-lg"
+            //          src={mushroom.path}
+            //          alt="Sunset in the mountains"
+            //       />
+            //    </Link>
+            //    <div className="px-6 py-4">
+            //       <p className="text-gray-700 text-base mb-2 text-center">
+            //          <span className="font-bold text-primary">
+            //             {mushroom.name}
+            //          </span>
+            //       </p>
+            //       <div className="font-bold text-center text-xl mb-2">
+            //          {mushroom.jenis_jamur}
+            //       </div>
+            //       <p className="text-gray-700 text-base">
+            //          {mushroom.description}
+            //       </p>
+            //    </div>
+            // <div className="px-6 pt-4 pb-2">
+            //    <span className="inline-block bg-blue-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+            //       {mushroom.isEdible ? "Edible" : "Inedible"}
+            //    </span>
+            //    <span className="inline-block bg-green-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+            //       {mushroom.jenis_jamur}
+            //    </span>
+            // </div>
+            // </div>
             <div
                key={mushroom.id}
-               className="max-w-sm rounded overflow-hidden shadow-lg"
+               className="w-full md:w-1/2 lg:w-1/4 px-4 mb-8 group"
             >
-               <Link
-                  to={`/mushroom-detail/${encodeURIComponent(mushroom.name)}`}
-               >
-                  <img
-                     className="w-full"
-                     src={mushroom.path}
-                     alt="Sunset in the mountains"
-                  />
-               </Link>
-               <div className="px-6 py-4">
-                  <div className="font-bold text-xl mb-2">{mushroom.name}</div>
-                  <p className="text-gray-700 text-base">
-                     {mushroom.description}
-                  </p>
+               {/* <Link to={`/mushroom-detail/${encodeURIComponent(mushroom.name)}`}> */}
+               {/* {" "} */}
+               {/* Link to detail page */}
+               <div className="h-full rounded-lg overflow-hidden shadow-lg border border-gray-300 transition duration-300 transform group-hover:scale-105 lg:font-semibold flex flex-col">
+                  <div className="relative flex-shrink-0 h-[200px]">
+                     {" "}
+                     {/* Set tinggi gambar */}
+                     <Link
+                        to={`/mushroom-detail/${encodeURIComponent(
+                           mushroom.name
+                        )}`}
+                     >
+                        <img
+                           src={mushroom.path}
+                           alt={mushroom.name}
+                           className="w-full h-40 object-cover rounded-t-lg"
+                        />
+                     </Link>
+                  </div>
+                  <div className="p-4 flex flex-col justify-between">
+                     <div className="text-dark text-2xl max-w-md">
+                        <p className="text-gray-700 text-base mb-2 text-center">
+                           <span className="font-bold text-primary">
+                              {mushroom.name}
+                           </span>
+                        </p>
+                        <h2 className="font-bold text-center mb-2 lg:text-lg line-clamp-2">
+                           {" "}
+                           {/* Batasi jumlah baris untuk judul */}
+                           {mushroom.jenis_jamur}
+                        </h2>
+                     </div>
+                     <div className="text-gray-700 text-base mb-4 text-justify overflow-hidden line-clamp-3">
+                        {" "}
+                        {/* Batasi jumlah baris untuk deskripsi */}
+                        <span className="font-bold">
+                           Deskripsi: <br />
+                        </span>
+                        {mushroom.description}
+                     </div>
+                     <div className="px-6 text-center pt-4 pb-2">
+                        <span className=" inline-block bg-blue-200 rounded-full px-1 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                           {mushroom.isEdible ? "Edible" : "Inedible"}
+                        </span>
+                        <span className="inline-block bg-green-200 rounded-full px-1 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+                           {mushroom.jenis_jamur}
+                        </span>
+                     </div>
+                  </div>
                </div>
-               <div className="px-6 pt-4 pb-2">
-                  <span className="inline-block bg-blue-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                     {mushroom.isEdible ? "Edible" : "Inedible"}
-                  </span>
-                  <span className="inline-block bg-green-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-                     {mushroom.jenis_jamur}
-                  </span>
-               </div>
+
+               {/* </Link> */}
             </div>
          );
       });
@@ -164,7 +228,7 @@ const Mushrooms = () => {
                )}
                {console.log(userMushrooms)}
             </div>
-            <div className="max-w-full mx-auto text-center mb-6 mt-6">
+            {/* <div className="max-w-full mx-auto text-center mb-6 mt-6">
                <h4 className="font-semibold text-2xl text-primary mb-2">
                   Edible
                </h4>
@@ -183,7 +247,7 @@ const Mushrooms = () => {
                ) : (
                   renderMushrooms(inedibleMushrooms)
                )}
-            </div>
+            </div> */}
          </div>
       </section>
    );

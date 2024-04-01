@@ -83,7 +83,7 @@ function Navbar() {
                   </button>
                   <nav
                      id="nav-menu"
-                     className="hidden absolute py-5 bg-white shadow-lg rounded-t-none rounded-bl-lg rounded-br-lg max-w-xl w-full right-36 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none"
+                     className="hidden absolute -mr-36 py-5 bg-white shadow-lg rounded-t-none rounded-bl-lg rounded-br-lg max-w-xl w-full right-36 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none"
                   >
                      <ul className="block lg:flex lg:mr-[300px]">
                         <li className="group">
@@ -146,7 +146,7 @@ function Navbar() {
                               src="src/assets/svg/logout-svgrepo-com.svg"
                               alt="Logout"
                               height="3"
-                              width="50"
+                              width="15"
                               className="mr-3"
                            />
                            <span>Logout</span>
@@ -172,16 +172,16 @@ function Navbar() {
                   />
                </Link>
             </div>
-            <div className="px-4">
+            <div className="px-1">
                <nav
                   id="nav-menu"
-                  className="hidden absolute py-5 bg-white shadow-lg rounded-t-none rounded-bl-lg rounded-br-lg max-w-xl w-full right-36 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none"
+                  className="hidden absolute py-1 bg-white shadow-lg rounded-t-none rounded-bl-lg rounded-br-lg max-w-xl w-full right-36 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none"
                >
                   <ul className="block lg:flex lg:mr-[300px]">
                      <li className="group">
                         <Link
                            to="/dashboard"
-                           className="text-base font-bold text-saildark py-2 mx-8 group-hover:text-primary flex"
+                           className="text-base center font-bold text-saildark py-2 mx-8 group-hover:text-primary flex"
                         >
                            Home
                         </Link>
